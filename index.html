@@ -2,27 +2,27 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
-  <meta property="og:title" content="Dreamix: Video Diffusion Models are General Video Editors"/>
-  <meta property="og:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video."/>
-  <meta property="og:url" content="https://dreamix-video-editing.github.io"/>
-  <meta property="og:image" content="static/image/og_banner_image.png" />
+  <meta name="description" content="PP-VCtrl is a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks.">
+  <meta property="og:title" content="PP-VCtrl:Enabling Versatile Controls for Video Diffusion Models"/>
+  <meta property="og:description" content="PP-VCtrl is a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video generation model into a custom video generator, without retraining of the original generator."/>
+  <meta property="og:url" content="https:/pp-vctrl.github.io"/>
+  <meta property="og:image" content="static/image/model.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Dreamix: Video Diffusion Models are General Video Editors">
-  <meta name="twitter:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
-  <meta name="twitter:image" content="static/images/twitter_banner_image.png">
+  <meta name="twitter:title" content="PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models">
+  <meta name="twitter:description" content="PP-VCtrl a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks">
+  <meta name="twitter:image" content="static/images/twitte_model.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="Video diffusion models, video editing, dreamix, dreambooth, imagen-video">
+  <meta name="keywords" content="Video diffusion models, controllable video generation, image-to-video, text-to-video">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Dreamix: Video Diffusion Models are General Video Editors</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models  </title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
+  <link rel="icon" type="image/png" href="static/images/image.jpg">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -47,13 +47,13 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Dreamix: Video Diffusion Models are General Video Editors</h1>
+            <h1 class="title is-1 publication-title">PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-             <span class="author-block">
+             <!-- <span class="author-block">
                 Eyal Molad<sup>*,1</sup>,
-              </span>
-              <span class="author-block">
+              </span> -->
+              <!-- <span class="author-block">
                 <a href="https://pages.cs.huji.ac.il/eliahu-horwitz/" target="_blank">Eliahu Horwitz</a><sup>*,1,2</sup>,
               </span>
               <span class="author-block">
@@ -63,42 +63,49 @@
                 <a href="https://www.linkedin.com/in/alexravacha" target="_blank">Alex Rav Acha</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                Yossi Matias<sup>1</sup>,
-              </span>
+                Yossi Matias<sup>1</sup>, -->
+              <!-- </span>
               <span class="author-block">
                 Yael Pritch<sup>1</sup>,
               </span>
               <span class="author-block">
-                 <a href="https://yanivle.github.io/" target="_blank">Yaniv Leviathan</a><sup>†,1</sup>,
-              </span>
+                 <a href="https://yanivle.github.io/" target="_blank">Yaniv Leviathan</a><sup>†,1</sup>, -->
+              <!-- </span>
               <span class="author-block">
                 <a href="http://www.cs.huji.ac.il/~ydidh" target="_blank">Yedid Hoshen</a><sup>†,1,2</sup>
               </span>
-            </div>
+            </div> -->
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Google Research,</span>
-              <span class="author-block"><sup>2</sup>The Hebrew University of Jerusalem</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution, <sup>†</sup>Indicates Equal Advising</small></span>
-              <span class="eql-cntrb"><small></small></span>
+              <span class="author-block"><sup>1</sup>Baidu Inc</span>
             </div>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
+            <!-- <div class="column has-text-centered">
+              <div class="publication-links"> -->
                 <!-- Arxiv PDF link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/pdf/2302.01329.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
+                </span> -->
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/PaddlePaddle/PaddleMIX/tree/develop/ppdiffusers/examples/ppvctrl" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
                 </span>
+                <span>Code</span>
+              </a>
+            </span>
 
 
 
             <!-- ArXiv abstract Link -->
-            <span class="link-block">
+            <!-- <span class="link-block">
               <a href="https://arxiv.org/abs/2302.01329" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -106,7 +113,7 @@
                 </span>
                 <span>arXiv</span>
               </a>
-            </span>
+            </span> -->
           </div>
         </div>
       </div>
@@ -118,45 +125,195 @@
 
 
 
+<!-- <h1 style="text-align: center; font-size: 18px; margin-bottom: 20px;">
+  We propose PP-Vctrl, a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video or image-to-video generation model into a custom video generator, without retraining of the original generator.
+</h1> -->
 
+<h2 class="title is-3" style="text-align: center; margin-top: 20px;">DEMOS SHOW</h2>
 
-
-
-<!-- Subject Driven Video Generation carousel -->
+<!-- Canny Video Generation carousel -->
 <section class="hero teaser">
       <div class="hero-body ">
     <div class="container is-max-desktop">
-  
-      <div id="results-carousel" class="carousel results-carousel">
+      
+    <div id="results-carousel" class="carousel results-carousel">
+        
         <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay muted loop playsinline height="100%" src="static/videos/banner_video.mp4">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_longvideo_case1.mp4"
+            type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">
-        Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video. Here, Dreamix turns the eating monkey (left) to a dancing bear (right) given the prompt “A bear dancing and jumping to upbeat music, moving his whole body“.
-      </h2>
+        <h2 class="subtitle has-text-centered",style="font-weight: bold">
+          " PP-VCtrl-Canny can effortlessly assist creators in achieving style transfer from video to artwork by leveraging the video's edge features as control conditions."
+        </h2>
         </div>
+
         <div class="item item-video2">
-          <video poster="" id="header-video2" autoplay muted loop playsinline height="100%" src="static/videos/img2vid_turtle.mp4">
+          <video poster="" id="header-video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_longvideo_case2.mp4"
+            type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">
-        Dreamix can create videos based on image and text inputs. In this example it is able to instill complex motion in a static image, adding a moving shark and making the turtle swim. In this case, visual fidelity to object location and background was preserved but the turtle direction was flipped.
-      </h2>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="header-video3" autoplay muted loop playsinline height="100%"  src="static/videos/subj_driv_lifting.mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-          Given a small collection of images showing the same subject, Dreamix can generate new videos with the subject in motion. In this example, given a small number of images of the toy fireman, Dreamix is able to extract the visual features then animate it to lift weights while maintaining fidelity and temporal consistency.
-      </h2>
+        <h2 class="subtitle has-text-centered">
+          "PP-VCtrl-Canny can effortlessly assist creators in achieving style transfer from anime-style videos to real-world videos by leveraging the video's edge features as control conditions."
+        </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Subject Driven Video Generation carousel -->
+<!-- End-->
+
+<!--  Mask Video Generation carousel -->
+<section class="hero teaser">
+      <div class="hero-body ">
+    <div class="container is-max-desktop">
+      
+    <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_longvideo_case1.mp4"
+            type="video/mp4">
+          </video>
+        <h2 class="subtitle has-text-centered",style="font-weight: bold">
+          " PP-VCtrl-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
+        </h2>
+        </div>
+
+        <div class="item item-video2">
+          <video poster="" id="header-video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_longvideo_case2.mp4"
+            type="video/mp4">
+          </video>
+        <h2 class="subtitle has-text-centered">
+          " PP-VCtrl-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
+        </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End-->
 
 
+<!--  Pose Video Generation carousel -->
+<section class="hero teaser">
+  <div class="hero-body ">
+<div class="container is-max-desktop">
+  
+<div id="results-carousel" class="carousel results-carousel">
+  <div class="item item-video1">
+    <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+        <source src="static/videos/pose_case_10.mp4"
+        type="video/mp4">
+      </video>
+  <h2 class="subtitle has-text-centered",style="font-weight: bold">
+    "PP-VCtrl-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
+  </h2>
+  </div>
+    
+    <div class="item item-video1">
+      <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+        <source src="static/videos/pose_case_11.mp4"
+        type="video/mp4">
+      </video>
+    <h2 class="subtitle has-text-centered",style="font-weight: bold">
+      "PP-VCtrl-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
+    </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
+<!-- Canny v2v -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Canny</h2>
+      <p class="subtitle" style="text-align: left; margin-top: 10px;">
+        First, you should perform Canny edge detection on the any video to obtain the corresponding Control Video. 
+        Then, use ControlNet-Canny to redraw the first frame of the video to obtain the Reference Image. 
+        Finally, use the Control Video and Reference Image as conditions to generate a stylistically different video by PP-VCtrl-Canny-I2V.
+      </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_case1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_case2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End Canny v2v -->
+
+<!-- Mask v2v -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Mask</h2>
+      <p class="subtitle" style="text-align: left; margin-top: 10px;">
+        First, you are expected to select the subject to be edited from the your video and use SAM2 for subject segmentation to obtain the control video. 
+        Then, use Image Inpainting method to edit the first frame of the video to obtain the reference image. 
+        Finally, use the control video and reference image as conditions to edit the entire video by PP-VCtrl-I2V-Mask.
+      </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_case1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_case2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End Mask v2v -->
+
+<!-- Pose v2v -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Pose</h2>
+      <p class="subtitle" style="text-align: left; margin-top: 10px;">
+        First, you can use a pose detection model to obtain the sequence of poses from the video you provide. 
+        Then, use ControlNet-Pose to regenerate the first frame of the video, obtaining the reference image. 
+        Finally, use the control video and reference image as conditions to perform style transfer and redraw the video by PP-VCtrl-I2V-Pose.
+      </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/pose_case1.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/pose_case2.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End Pose v2v -->
 
 
 
@@ -169,7 +326,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-driven image and video diffusion models have recently achieved unprecedented generation realism. While diffusion models have been successfully applied for image editing, very few works have done so for video editing. We present the first diffusion-based method that is able to perform text-based motion and appearance editing of general videos. Our approach uses a video diffusion model to combine, at inference time, the low-resolution spatio-temporal information from the original video with new, high resolution information that it synthesized to align with the guiding text-prompt. As obtaining high-fidelity to the original video requires retaining some of its high-resolution information, we add a preliminary stage of finetuning the model on the original video, significantly boosting fidelity. We propose to improve motion editability by a new, mixed objective that jointly finetunes with full temporal attention and with temporal attention masking. We further introduce a new framework for image animation. We first transform the image into a coarse video by simple image processing operations such as replication and perspective geometric projections, and then use our general video editor to animate it. As a further application, we can use our method for subject-driven video generation. Extensive qualitative and numerical experiments showcase the remarkable editing ability of our method and establish its superior performance compared to baseline methods.
+            Despite recent advances in text-to-video generation, achieving fine-grained controllability and precise text-video alignment remains challenging. To address these limitations, we propose a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks—into pretrained video diffusion models. Our framework introduces a generalizable conditional module capable of uniformly encoding multiple types of auxiliary signals without modifying the underlying generator. Additionally, we design a standardized encoding pipeline combined with a sparse residual connection mechanism to efficiently incorporate control representations. Comprehensive experiments demonstrate that our proposed approach effectively enhances controllability and generation quality, as validated through comprehensive experiments and human evaluations.
           </p>
         </div>
       </div>
@@ -179,205 +336,23 @@
 <!-- End paper abstract -->
 
 
-<!-- Vid2vid carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Video Editing</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="vid2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_leaping.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="vid2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_party_hat.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="vid2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_robot.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="vid2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_cake.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video5">
-          <video poster="" id="vid2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_hello.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video6">
-          <video poster="" id="vid2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_zoom.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video7">
-          <video poster="" id="vid2vid_video7" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_fire.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video8">
-          <video poster="" id="vid2vid_video8" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_cats.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video9">
-          <video poster="" id="vid2vid_video9" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_skateboard.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video10">
-          <video poster="" id="vid2vid_video10" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_logs.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video11">
-          <video poster="" id="vid2vid_video11" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_noodles.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video12">
-          <video poster="" id="vid2vid_video12" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_circle.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video13">
-          <video poster="" id="vid2vid_video13" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_hello2.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video14">
-          <video poster="" id="vid2vid_video14" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_football.mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-video15">
-          <video poster="" id="vid2vid_video15" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_orangutan_bath.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video16">
-          <video poster="" id="vid2vid_video16" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_truck_river.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video17">
-          <video poster="" id="vid2vid_video17" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_swans.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video18">
-          <video poster="" id="vid2vid_video18" playsinline autoplay muted loop height="90%" src="static/videos/vid2vid_saxophone.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End vid2vid carousel -->
-
-
-<!-- Img2vid carousel -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Image-to-Video</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="img2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_plant.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="img2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_buffalo.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="img2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_grizzly.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video4">
-          <video poster="" id="img2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_coffee.mp4">
-          </video>
-        </div>
-
-      <div class="item item-video5">
-          <video poster="" id="img2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_camel.mp4">
-          </video>
-        </div>
-      <div class="item item-video6">
-          <video poster="" id="img2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_pengiun.mp4">
-          </video>
-        </div>
-      <div class="item item-video7">
-          <video poster="" id="img2vid_video7" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_unicorn.mp4">
-          </video>
-        </div>
-
-      <div class="item item-video8">
-          <video poster="" id="img2vid_video8" playsinline autoplay muted loop height="90%" src="static/videos/img2vid_bigfoot.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End img2vid carousel -->
-
-
-<!-- Subject Driven Video Generation carousel -->
-<section class="hero is-small">
-  <div class="hero-body ">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Subject Driven Video Generation</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="sd_video1" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_walking.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="sd_video2" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_drinking.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="sd_video3" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_dancing.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="sd_video4" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_stretching.mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <video poster="" id="sd_video5" playsinline autoplay muted loop height="90%" src="static/videos/subj_driv_magnifying.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Subject Driven Video Generation carousel -->
-
-
-
+<!-- Paper Method -->
 <section class="section hero is-small is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Method Overview: Mixed Video-Image Finetuning</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: center;">Method Overview</h2>
+        <div class="content has-text-justified">
+          
           <center>
-          <img src="static/images/architecture_finetune.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          <img src="static/images/model.png" alt="PP-VCtrl Video-Image Finetuning" class="center-image blend-img-background"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Finetuning the video diffusion model on the input video alone limits the extent of motion change. Instead, we use a mixed objective that beside the original objective (bottom left) also finetunes on the unordered set of frames. This is done by using “masked temporal attention”, preventing the temporal attention and convolution from being finetuned (bottom right). This allows adding motion to a static video.
+              Overview architecture of VCtrl. A control signal (e.g., Canny edges, semantic masks, or pose keypoints) is first encoded by the
+              control encoder. The resulting representation is then additively combined with latent and incorporated into the Video Diffusion Model via
+              the proposed VCtrl module, which leverages a sparse residual connection mechanism. After several iterative denoising steps, the refined
+              latent is decoded by a pretrained VAE to produce the final video.
             </p>
           </div>
         </div>
@@ -385,75 +360,145 @@
     </div>
   </div>
 </section>
+<!-- Paper Method -->
 
-
-
-<section class="section is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Inference Overview</h2>
-          <center>
-          <img src="static/images/architecture_applications_extended.png" alt="Inference Overview" class="center-image"/>
-          </center>
-          <div class="level-set has-text-justified">
-            <p>
-               Our method supports multiple applications by application dependent pre-processing (left), converting the input content into a uniform video format. For image-to-video, the input image is duplicated and transformed using perspective transformations, synthesizing a coarse video with some camera motion. For subject driven video generation, the input is omitted -  finetuning alone take care of the fidelity.
-               This coarse video is then edited using our general ``Dreamix Video Editor`` (right): we first corrupt the video by downsampling followed by adding noise. We then apply the finetuned text-guided video diffusion model, which upscales the video to the final spatio-temporal resolution
-            </p>
-          </div>
+<!-- Comparisons Canny-->
+<h2 class="title is-3" style="text-align: center; margin-bottom: 2rem;">Comparisons with Other Methods</h2>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.0rem;">Canny-to-Video</h2>
+     
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_comparison_case2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/canny_comparison_case1.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Comparisons Canny-->
+
+
+<!-- Comparisons Mask-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.0rem;">Mask-to-Video</h2>
+      
+    
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_comparison_case1.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/mask_comparison_case2.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparisons Mask-->
+
+
+<!-- Comparisons Pose-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.8rem;">Pose-to-Video</h2>
+      
+    
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/pose_comparison_case1.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/pose_comparison_case2.mp4"
+            type="video/mp4">
+          </video>
+          
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparisons Pose-->
+<section class="hero is-small">
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title is-4" style="text-align: center;">Quantitive Result</h2>
+    <div class="item item-image1">
+      <img src="static/images/eval1.png" alt="Canny Comparison Case 2" style="width: 65%; display: block; margin: 0 auto;">
+    </div>
+  </div>
+</section>
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/xcvnHhfDSGM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/xcvnHhfDSGM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 
 <!--BibTex citation -->
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{molad2023dreamix,
-  title={Dreamix: Video Diffusion Models are General Video Editors},
-  author={Molad, Eyal and Horwitz, Eliahu and Valevski, Dani and Acha, Alex Rav and Matias, Yossi and Pritch, Yael and Leviathan, Yaniv and Hoshen, Yedid},
-  journal={arXiv preprint arXiv:2302.01329},
-  year={2023}
+  title={PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models},
+  author={\\\\},
+  journal={\\\},
+  year={2025}
 }</code></pre>
   </div>
-</section>
+</section> -->
 <!-- End BibTex citation -->
 
-<!--Acknowledgements -->
+<!-- Acknowledgements
 <section class="section" id="Acknowledgements">
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgements</h2>
   We thank Ely Sarig for creating the video, Jay Tenenbaum for the video narration, Amir Hertz for the implementation of our eval baseline, Daniel Cohen-Or, Assaf Zomet, Eyal Segalis, Matan Kalman and Emily Denton for their valuable inputs that helped improve this work.
   </div>
-</section>
+</section> -->
 <!--End Acknowledgements -->
   
 <footer class="footer">
@@ -478,7 +523,7 @@
 
 <!-- Default Statcounter code for Dreamix
 https://dreamix-video-editing.github.io -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var sc_project=12843789; 
 var sc_invisible=1; 
 var sc_security="e9c3bf5f"; 
@@ -491,7 +536,7 @@ href="https://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="https://c.statcounter.com/12843789/0/e9c3bf5f/1/"
 alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> -->
 
 <!-- End of Statcounter Code -->
 
