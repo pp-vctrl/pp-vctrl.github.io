@@ -2,24 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="PP-VCtrl is a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks.">
-  <meta property="og:title" content="PP-VCtrl:Enabling Versatile Controls for Video Diffusion Models"/>
-  <meta property="og:description" content="PP-VCtrl is a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video generation model into a custom video generator, without retraining of the original generator."/>
+  <meta name="description" content="VCtrl is a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks.">
+  <meta property="og:title" content="VCtrl:Enabling Versatile Controls for Video Diffusion Models"/>
+  <meta property="og:description" content="VCtrl is a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video generation model into a custom video generator, without retraining of the original generator."/>
   <meta property="og:url" content="https:/pp-vctrl.github.io"/>
   <meta property="og:image" content="static/image/model.png" />
   <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:height" content="620"/>
 
 
-  <meta name="twitter:title" content="PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models">
-  <meta name="twitter:description" content="PP-VCtrl a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks">
+  <meta name="twitter:title" content="VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models">
+  <meta name="twitter:description" content="VCtrl a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks">
   <meta name="twitter:image" content="static/images/twitte_model.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="Video diffusion models, controllable video generation, image-to-video, text-to-video">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models  </title>
+  <title>VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models  </title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
   <link rel="icon" type="image/png" href="static/images/image.jpg">
@@ -47,38 +47,51 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models</h1>
+            <h1 class="title is-1 publication-title">VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-             <!-- <span class="author-block">
-                Eyal Molad<sup>*,1</sup>,
-              </span> -->
-              <!-- <span class="author-block">
-                <a href="https://pages.cs.huji.ac.il/eliahu-horwitz/" target="_blank">Eliahu Horwitz</a><sup>*,1,2</sup>,
+             <span class="author-block">
+               Xu Zhang</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/dani-valevski-a3b5936/" target="_blank">Dani Valevski</a><sup>*,1</sup>,
+               Hao Zhou</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/alexravacha" target="_blank">Alex Rav Acha</a><sup>1</sup>,
+                Haoming Qin</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
-                Yossi Matias<sup>1</sup>, -->
-              <!-- </span>
-              <span class="author-block">
-                Yael Pritch<sup>1</sup>,
+                XiaoBin Lu</a><sup>1,3</sup>,
               </span>
               <span class="author-block">
-                 <a href="https://yanivle.github.io/" target="_blank">Yaniv Leviathan</a><sup>†,1</sup>, -->
-              <!-- </span>
-              <span class="author-block">
-                <a href="http://www.cs.huji.ac.il/~ydidh" target="_blank">Yedid Hoshen</a><sup>†,1,2</sup>
+                Guanzhong Wang<sup>1</sup>,
               </span>
-            </div> -->
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Baidu Inc</span>
+              <span class="author-block">
+                Jiaxing Yan<sup>1</sup>,
+              </span>
+              <span class="author-block">
+               Zeyu Chen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Yi Liu</a><sup>1</sup>
+              </span>
             </div>
+
+            <div class="is-size-5 publication-authors" style="text-align: center;">
+              <span class="author-block"><sup>1</sup>Baidu Inc</span>
+              <span class="author-block"><sup>2</sup>Xiamen University</span>
+              <span class="author-block"><sup>3</sup>Sun Yat-sen University</span>
+            </div>
+            
+            <style>
+              .publication-authors {
+                display: flex;
+                justify-content: center; /* 内容居中 */
+                gap: 20px;
+              }
+              .author-block {
+                white-space: nowrap;
+              }
+            </style>
 
             <!-- <div class="column has-text-centered">
               <div class="publication-links"> -->
@@ -144,7 +157,7 @@
             type="video/mp4">
           </video>
         <h2 class="subtitle has-text-centered",style="font-weight: bold">
-          " PP-VCtrl-Canny can effortlessly assist creators in achieving style transfer from video to artwork by leveraging the video's edge features as control conditions."
+          " VCtrl-I2V-Canny can effortlessly assist creators in achieving style transfer from video to artwork by leveraging the video's edge features as control conditions."
         </h2>
         </div>
 
@@ -154,7 +167,7 @@
             type="video/mp4">
           </video>
         <h2 class="subtitle has-text-centered">
-          "PP-VCtrl-Canny can effortlessly assist creators in achieving style transfer from anime-style videos to real-world videos by leveraging the video's edge features as control conditions."
+          "VCtrl-I2V-Canny can effortlessly assist creators in achieving style transfer from anime-style videos to real-world videos by leveraging the video's edge features as control conditions."
         </h2>
         </div>
       </div>
@@ -176,7 +189,7 @@
             type="video/mp4">
           </video>
         <h2 class="subtitle has-text-centered",style="font-weight: bold">
-          " PP-VCtrl-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
+          " VCtrl-I2V-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
         </h2>
         </div>
 
@@ -186,7 +199,7 @@
             type="video/mp4">
           </video>
         <h2 class="subtitle has-text-centered">
-          " PP-VCtrl-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
+          " VCtrl-I2V-Mask allows creators to easily perform diverse video editing tasks by selecting the specific content to be edited, enabling efficient customization."
         </h2>
         </div>
       </div>
@@ -208,7 +221,7 @@
         type="video/mp4">
       </video>
   <h2 class="subtitle has-text-centered",style="font-weight: bold">
-    "PP-VCtrl-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
+    "VCtrl-I2V-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
   </h2>
   </div>
     
@@ -218,7 +231,7 @@
         type="video/mp4">
       </video>
     <h2 class="subtitle has-text-centered",style="font-weight: bold">
-      "PP-VCtrl-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
+      "VCtrl-I2V-Pose enables creators to effortlessly achieve customized generation of character motion videos by extracting pose conditions."
     </h2>
     </div>
   </div>
@@ -230,11 +243,11 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Canny</h2>
+      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Canny</h2>
       <p class="subtitle" style="text-align: left; margin-top: 10px;">
         First, you should perform Canny edge detection on the any video to obtain the corresponding Control Video. 
         Then, use ControlNet-Canny to redraw the first frame of the video to obtain the Reference Image. 
-        Finally, use the Control Video and Reference Image as conditions to generate a stylistically different video by PP-VCtrl-Canny-I2V.
+        Finally, use the Control Video and Reference Image as conditions to generate a stylistically different video by VCtrl-I2V-Canny.
       </p>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
@@ -259,11 +272,11 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Mask</h2>
+      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Mask</h2>
       <p class="subtitle" style="text-align: left; margin-top: 10px;">
         First, you are expected to select the subject to be edited from the your video and use SAM2 for subject segmentation to obtain the control video. 
         Then, use Image Inpainting method to edit the first frame of the video to obtain the reference image. 
-        Finally, use the control video and reference image as conditions to edit the entire video by PP-VCtrl-I2V-Mask.
+        Finally, use the control video and reference image as conditions to edit the entire video by VCtrl-I2V-Mask.
       </p>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
@@ -288,11 +301,11 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">PP-VCtrl-I2V-Pose</h2>
+      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Pose</h2>
       <p class="subtitle" style="text-align: left; margin-top: 10px;">
         First, you can use a pose detection model to obtain the sequence of poses from the video you provide. 
         Then, use ControlNet-Pose to regenerate the first frame of the video, obtaining the reference image. 
-        Finally, use the control video and reference image as conditions to perform style transfer and redraw the video by PP-VCtrl-I2V-Pose.
+        Finally, use the control video and reference image as conditions to perform style transfer and redraw the video by VCtrl-I2V-Pose.
       </p>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
@@ -345,7 +358,7 @@
         <div class="content has-text-justified">
           
           <center>
-          <img src="static/images/model.png" alt="PP-VCtrl Video-Image Finetuning" class="center-image blend-img-background"/>
+          <img src="static/images/model.jpg" alt="PP-VCtrl Video-Image Finetuning" class="center-image blend-img-background"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
