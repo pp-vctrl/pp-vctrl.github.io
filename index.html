@@ -11,7 +11,7 @@
   <meta property="og:image:height" content="620"/>
 
 
-  <meta name="twitter:title" content="VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models">
+  <meta name="twitter:title" content="VCtrl: Enabling Versatile Controls for Video Diffusion Models">
   <meta name="twitter:description" content="VCtrl a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks">
   <meta name="twitter:image" content="static/images/twitte_model.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models  </title>
+  <title>VCtrl: Enabling Versatile Controls for Video Diffusion Models  </title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
   <link rel="icon" type="image/png" href="static/images/image.jpg">
@@ -47,7 +47,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models</h1>
+            <h1 class="title is-1 publication-title">VCtrl: Enabling Versatile Controls for Video Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
              <span class="author-block">
@@ -60,7 +60,7 @@
                 Haoming Qin</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
-                XiaoBin Lu</a><sup>1,3</sup>,
+                Xiaobin Lu</a><sup>1,3</sup>,
               </span>
               <span class="author-block">
                 Jiaxing Yan<sup>1</sup>,
@@ -93,17 +93,17 @@
               }
             </style>
 
-            <!-- <div class="column has-text-centered">
-              <div class="publication-links"> -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <!-- Arxiv PDF link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2302.01329.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
-                </span> -->
+                </span>
               <!-- Github link -->
               <span class="link-block">
                 <a href="https://github.com/PaddlePaddle/PaddleMIX/tree/develop/ppdiffusers/examples/ppvctrl" target="_blank"
@@ -114,7 +114,25 @@
                 <span>Code</span>
               </a>
             </span>
+            <!-- HuggingFace link -->
+            <span class="link-block">
+              <a href="https://huggingface.co/PaddleMIX" 
+                 target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">🤗</span>
+                <span>Models</span>
+              </a>
+            </span>
+            
+            <!-- AI studio link
+            <span class="link-block">
+              <a href="https://aistudio.baidu.com/projectdetail/8763487?searchKeyword=PP-VCtrl&searchTab=PROJECT" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span>Project</span>
+            </a>
+          </span> -->
 
+            
 
 
             <!-- ArXiv abstract Link -->
@@ -239,98 +257,6 @@
 </div>
 </section>
 
-<!-- Canny v2v -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Canny</h2>
-      <p class="subtitle" style="text-align: left; margin-top: 10px;">
-        First, you should perform Canny edge detection on the any video to obtain the corresponding Control Video. 
-        Then, use ControlNet-Canny to redraw the first frame of the video to obtain the Reference Image. 
-        Finally, use the Control Video and Reference Image as conditions to generate a stylistically different video by VCtrl-I2V-Canny!
-      </p>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/canny_case1_hevc.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/canny_case2_hevc.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        </div>
-    </div>
-  </div>
-</section>
-<!-- End Canny v2v -->
-
-<!-- Mask v2v -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Mask</h2>
-      <p class="subtitle" style="text-align: left; margin-top: 10px;">
-        First, you are expected to select the subject to be edited from the your video and use SAM2 for subject segmentation to obtain the control video. 
-        Then, use Image Inpainting method to edit the first frame of the video to obtain the reference image. 
-        Finally, use the control video and reference image as conditions to edit the entire video by VCtrl-I2V-Mask!
-      </p>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/mask_case1_hevc.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/mask_case2_hevc.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        </div>
-    </div>
-  </div>
-</section>
-<!-- End Mask v2v -->
-
-<!-- Pose v2v -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3" style="text-align: center;">VCtrl-I2V-Pose</h2>
-      <p class="subtitle" style="text-align: left; margin-top: 10px;">
-        First, you can use a pose detection model to obtain the sequence of poses from the video you provide. 
-        Then, use ControlNet-Pose to regenerate the first frame of the video, obtaining the reference image. 
-        Finally, use the control video and reference image as conditions to perform style transfer and redraw the video by VCtrl-I2V-Pose!
-      </p>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/pose_case1_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/pose_case2_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
-        </div>
-        </div>
-    </div>
-  </div>
-</section>
-<!-- End Pose v2v -->
-
-
-
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -348,13 +274,34 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- How does it works ? -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does VCtrl works?</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>We propose a Control Encoder for control embedding.</strong> The Control Encoder in VCtrl is designed to process various control signals in a unified manner. 
+              It accepts a raw control video as input. This format naturally accommodates a wide range of control types 
+              enabling a more effective representation of various types of control inputs and enhancing the model's adaptability across different tasks.</li>
+            <li><strong>We propose a novel module called VCtrl.</strong> The VCtrl module is predicated on a lightweight Transformer Encoder architecture. Its primary aim is to proficiently receive and process
+              a variety of input modalities through a series of compact blocks. </li>
+            <li><strong>We propose Sparse Residual Connection Mechanism for control signals injection.</strong> To integrate external conditioning information while preserving the stability of large pre-trained models, we propose a sparse residual connection mechanism that injects control signals via parallel, lightweight VCtrl sub-networks. </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- How dose VCtrl works ? -->
 
 <!-- Paper Method -->
 <section class="section hero is-small is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" style="text-align: center;">Method Overview</h2>
+        <!-- <h2 class="title is-3" style="text-align: center;">Method Overview</h2> -->
         <div class="content has-text-justified">
           
           <center>
@@ -362,7 +309,7 @@
           </center>
           <div class="level-set has-text-justified">
             <p>
-              Overview architecture of VCtrl. A control signal (e.g., Canny edges, semantic masks, or pose keypoints) is first encoded by the
+            <strong>Overview architecture of VCtrl</strong>. A control signal (e.g., Canny edges, semantic masks, or pose keypoints) is first encoded by the
               control encoder. The resulting representation is then additively combined with latent and incorporated into the Video Diffusion Model via
               the proposed VCtrl module, which leverages a sparse residual connection mechanism. After several iterative denoising steps, the refined
               latent is decoded by a pretrained VAE to produce the final video.
@@ -374,100 +321,169 @@
   </div>
 </section>
 <!-- Paper Method -->
+<!-- <h2 class="title is-3" style="text-align: center; margin-bottom: -1rem;">Comparisons with Other Methods</h2> -->
 
-<!-- Comparisons Canny-->
-<h2 class="title is-3" style="text-align: center; margin-bottom: 2rem;">Comparisons with Other Methods</h2>
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.0rem;">Canny-to-Video</h2>
-     
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/canny_comparison_case2_hevc.mp4" type="video/mp4">
-          </video>
+
+    <!-- 共同的标题 -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+              <h2 class="title is-3" style="text-align: center; margin-bottom: -10rem;">Comparisons with Other Methods</h2>
+            </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/canny_comparison_case1_hevc.mp4" type="video/mp4">
-          </video>
+    </section>
+
+    <!-- Canny-to-Video -->
+    <section class="section hero is-small ">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+              <h2 class="title is-4" style="text-align: center; margin-bottom: 1.0rem;">Canny-to-Video</h2>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-video1">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/canny_comparison_case2_hevc.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-video2">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/canny_comparison_case1_hevc.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mask-to-Video -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+              <h2 class="title is-4" style="text-align: center; margin-bottom: 0.8rem;">Mask-to-Video</h2>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-video1">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/mask_comparison_case1_hevc1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-video2">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/mask_comparison_case2_hevc2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pose-to-Video --> 
+    <section class="hero is-small ">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+              <h2 class="title is-4" style="text-align: center; margin-bottom: -1.6rem;">Pose-to-Video</h2>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-video1">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/pose_comparison_case1_hevc_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item item-video2">
+                        <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+                            <source src="static/videos/pose_comparison_case2_hevc_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<!-- Comparisons Quantitive-->
+<section class="hero is-small">
+  <div class="hero-body" style="text-align: center;">
+    <h2 class="title is-4" style="text-align: center; margin-bottom: 2.0rem;">Quantitative Results</h2>
+    <div class="container is-max-desktop">
+    <p class="subtitle" style="text-align: left;">
+      We present a comprehensive quantitative evaluation of our methods against existing representative approaches across three video generation tasks. For each task, we select suitable benchmarks and both established and newly proposed metrics to ensure a thorough comparison. Here are the quantitative results.
+    </p>
+    <div class="item item-image1">
+      <img src="static/images/eval_1.png" alt="Canny Comparison Case 2" style="width: 100%; display: block; margin: 0 auto;">
+  </div>
+</section>
+
+
+<!-- Canny v2v -->
+<section class="section hero is-small is-light" style="padding: 1rem 0; margin-bottom: 0">
+  <h2 class="title is-3" style="text-align: center">Diversity of Generated Video</h2>
+    <div class="hero-body" style="padding: 0.5rem">
+      <div class="container  is-max-desktop">
+
+        <p class="subtitle" style="text-align: left;">
+          Our method demonstrates strong generalizability by generating diverse video outputs from the same control signals, achieved through altering the initial reference frame. This capability underscores the flexibility and scalability of the proposed framework. Here are the various generated videos.
+        </p>
+
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/canny_case1_hevc.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/canny_case2_hevc.mp4"
+              type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Comparisons Canny-->
-
-
-<!-- Comparisons Mask-->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.0rem;">Mask-to-Video</h2>
-      
-    
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/mask_comparison_case1_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
+  </section>
+  
+  <!-- Mask v2v -->
+  <section class="section hero is-small is-light" style="padding: 1rem 0; margin: 0">
+    <div class="hero-body" style="padding: 0.5rem">
+      <div class="container  is-max-desktop">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/mask_case1_hevc.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/mask_case2_hevc.mp4"
+              type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/mask_comparison_case2_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
-        </div>
-        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Comparisons Mask-->
-
-
-<!-- Comparisons Pose-->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-4" style="text-align: center; margin-bottom: -1.8rem;">Pose-to-Video</h2>
-      
-    
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/pose_comparison_case1_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
+  </section>
+  
+  <!-- Pose v2v -->
+  <section class="section hero is-small is-light" style="padding: 1rem 0; margin-top: 0">
+    <div class="hero-body" style="padding: 0.5rem">
+      <div class="container  is-max-desktop">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/pose_case1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="header-video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/pose_case2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="header-video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/pose_comparison_case2_hevc.mp4"
-            type="video/mp4">
-          </video>
-          
-        </div>
-        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Comparisons Pose-->
-<section class="hero is-small">
-  <div class="hero-body" style="text-align: center;">
-    <h2 class="title is-4" style="text-align: center;">Quantitive Result</h2>
-    <div class="item item-image1">
-      <img src="static/images/eval1.png" alt="Canny Comparison Case 2" style="width: 65%; display: block; margin: 0 auto;">
-    </div>
-  </div>
-</section>
-
+  </section>
+<!-- End Pose v2v -->
 
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
@@ -492,7 +508,7 @@
 
 
 <!--BibTex citation -->
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{molad2023dreamix,
@@ -502,7 +518,7 @@
   year={2025}
 }</code></pre>
   </div>
-</section> -->
+</section>
 <!-- End BibTex citation -->
 
 <!-- Acknowledgements
