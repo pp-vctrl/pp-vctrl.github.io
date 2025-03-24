@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="VCtrl is a unified framework for controllable video generation that enables precise spatiotemporal control by integrating diverse user-specified control signals—such as Canny edges, human keypoints, and segmentation masks.">
-  <meta property="og:title" content="VCtrl:Enabling Versatile Controls for Video Diffusion Models"/>
+  <meta property="og:title" content="VCtrl: Enabling Versatile Controls for Video Diffusion Models"/>
   <meta property="og:description" content="VCtrl is a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video generation model into a custom video generator, without retraining of the original generator."/>
   <meta property="og:url" content="https:/pp-vctrl.github.io"/>
   <meta property="og:image" content="static/image/model.png" />
@@ -47,7 +47,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">VCtrl: Enabling Versatile Controls for Video Diffusion Models</h1>
+            <h1 class="title is-1 publication-title">Enabling Versatile Controls for Video Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
              <span class="author-block">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="is-size-5 publication-authors" style="text-align: center;">
-              <span class="author-block"><sup>1</sup>Baidu Inc</span>
+              <span class="author-block"><sup>1</sup>PaddlePaddle Team, Baidu Inc.</span>
               <span class="author-block"><sup>2</sup>Xiamen University</span>
               <span class="author-block"><sup>3</sup>Sun Yat-sen University</span>
             </div>
@@ -282,12 +282,9 @@
         <h2 class="title is-3">How does VCtrl works?</h2>
         <div class="content has-text-justified">
           <ul>
-            <li><strong>We propose a Control Encoder for control embedding.</strong> The Control Encoder in VCtrl is designed to process various control signals in a unified manner. 
-              It accepts a raw control video as input. This format naturally accommodates a wide range of control types 
-              enabling a more effective representation of various types of control inputs and enhancing the model's adaptability across different tasks.</li>
-            <li><strong>We propose a novel module called VCtrl.</strong> The VCtrl module is predicated on a lightweight Transformer Encoder architecture. Its primary aim is to proficiently receive and process
-              a variety of input modalities through a series of compact blocks. </li>
-            <li><strong>We propose Sparse Residual Connection Mechanism for control signals injection.</strong> To integrate external conditioning information while preserving the stability of large pre-trained models, we propose a sparse residual connection mechanism that injects control signals via parallel, lightweight VCtrl sub-networks. </li>
+            <li><strong>We propose a Unified Control Signal Encoding pipeline.</strong> It transforms diverse video-based control signals into a unified latent representation, incorporating adaptive masks to enhance cross-condition adaptability.</li>
+            <li><strong>We introduce VCtrl, a lightweight auxiliary control module.</strong> This Transformer-based module efficiently encodes abstract conditioning signals into residual representations, enabling precise and fine-grained control over the base model's internal representations.</li>
+            <li><strong>We propose a Sparse Residual Connection Mechanism.</strong> This approach integrates residual representations from VCtrl into pre-trained models, effectively balancing control accuracy and computational efficiency.</li>
           </ul>
         </div>
       </div>
@@ -512,10 +509,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{molad2023dreamix,
-  title={PP-VCtrl: Enabling Versatile Controls for Text-to-Video Diffusion Models},
-  author={\\\\},
-  journal={\\\},
-  year={2025}
+  title={Enabling Versatile Controls for Video Diffusion Models},
+  author={Xu Zhang and Hao Zhou and Haoming Qin and Xiaobin Lu and Jiaxing Yan and Guanzhong Wang and Zeyu Chen and Yi Liu},
+  journal={arXiv preprint arXiv:2503.16983},
+  year={2025},
 }</code></pre>
   </div>
 </section>
